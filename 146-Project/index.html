@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene background="color:black">
+    <a-scene>
+
+
+      <!--GROUND-->
+      <a-plane
+        id="ground" color="black" position="0 0 0" rotation="-90 0 0" width="20" height="10"
+      ></a-plane>
+
+      <!-- Head -->
+      <a-box
+        id="head" color="#0276aa" position="0 8 0" width="3.2" height="2.2"
+      ></a-box>
+
+      <!-- Eyes -->
+      <a-sphere
+        color="white" position="-0.63 8.3 0.2" radius="0.6" rotation="0 10 0" ></a-sphere>
+
+      <a-sphere
+        color="black" radius="0.15" position="-0.63 8.1 0.9" animation=property: position; from:-0.63 8.1 0.9;to: -0.63 8.3 0.9;dir:alternate;loop: true; dur: 1000;"
+      ></a-sphere>
+
+      <a-sphere
+        color="white" position="0.63 8.3 0.2" radius="0.6" rotation="0 -10 0"
+      ></a-sphere>
+      <a-sphere
+        color="black" radius="0.15" position="0.63 8.1 0.9" animation=property: position; from:0.63 8.1 0.9;to: 0.63 8.3 0.9;dir:alternate;loop: true; dur: 1000;"
+      ></a-sphere>
+
+      <!-- Mouth -->
+      <a-entity
+     position="0 8.2 0.55" rotation="0 0 120" color="orange;" geometry="primitive: ring; thetaStart:100;thetaLength:100;radiusOuter: 1; radiusInner: 0.9;"></a-entity>
+      <!-- Neck -->
+      <a-box id="neck" color="orange" position="0 6.7 0" width="2" height="0.4"></a-box>
+
+      <!-- Body -->
+      <a-box
+        id="body" color="#0276aa" position="0 4.5 0" width="4.5" height="4"></a-box>
+      <!-- Left Hand -->
+      <a-cylinder
+        position="-2.5 5.4 0" rotation="30 90 0" color="orange" height="2" width="0.2" radius="0.3"
+      ></a-cylinder>
+      
+      <a-entity
+        position="-4.3 5.8 0" color="#0276aa;"
+      ></a-entity>
+
+      <!-- Right Hand -->
+      <a-cylinder
+        position="2.7 5.5 0" rotation="-50 90 0" color="orange" height="2" width="0.2" radius="0.3"></a-cylinder>
+      <a-entity
+        position="4.5 5.8 0" color="#0276aa;"
+      ></a-entity>
+
+      <!-- Left Legs -->
+      <a-cylinder color="orange" radius="0.4" height="3.5" position="-1 0.7 0">
+      </a-cylinder>
+
+      <!-- Right Leg -->
+      <a-cylinder color="orange" radius="0.4" height="3.5" position="1 0.7 0">
+      </a-cylinder>
+
+    </a-scene>
+  </body>
+</html>
